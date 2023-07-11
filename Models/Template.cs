@@ -1,11 +1,8 @@
-using System;
-using Csharp.Models;
 using System.Collections.Generic;
-
-namespace Template
+namespace Template.Models
 {
-  class Program
+  public class Template
   {
-    static void Main();
+
   }
 }
