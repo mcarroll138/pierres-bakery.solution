@@ -5,15 +5,19 @@ using System;
 
 namespace PierresBakery.Tests
 {
-  [TestClass]
-  public class BreadTests
-  {
-    [TestMethod]
-    public void BreadOrderContructor_MakeABreadOrder_BreadOrder()
-    {
 
-      BreadOrder testBreadOrder = new BreadOrder(2, 3);
-      Assert.AreEqual(typeof(BreadOrder), testBreadOrder.GetType());
-    }
+  [TestMethod]
+  public void CalculateTotalCost_ReturnCorrectTotalCost()
+  {
+    //Arrange
+    int numberOfLoaves = 1;
+    int expectedCost = 5;
+    Bread bread = new Bread();
+
+    //Act
+    int actualCost = bread.CalculateBreadCost(numberOfLoaves);
+
+    //Assert
+    Assert.AreEqual(expectedCost, actualCost);
   }
 }
