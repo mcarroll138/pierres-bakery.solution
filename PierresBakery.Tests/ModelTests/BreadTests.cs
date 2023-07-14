@@ -30,7 +30,7 @@ namespace PierresBakery.Tests
       Bread bread = new Bread();
 
       // Act
-      int actualCost = Bread.CalculatedBreadCostForDeal(numberOfLoaves);
+      int actualCost = bread.CalculateBreadCost(numberOfLoaves);
       // Assert
       Assert.AreEqual(expectedCost, actualCost);
     }
