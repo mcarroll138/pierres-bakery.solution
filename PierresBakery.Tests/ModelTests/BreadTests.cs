@@ -34,6 +34,7 @@ namespace PierresBakery.Tests
       // Assert
       Assert.AreEqual(expectedCost, actualCost);
     }
-
   }
 }
+
+
