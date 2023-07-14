@@ -6,6 +6,7 @@ namespace PierresBakery.Tests
   [TestClass]
   public class PastryTests
   {
+    [TestMethod]
     public void CalculatePastryCost_ReturnsCorrectCostForSinglePastry()
     {
       // Arrange
