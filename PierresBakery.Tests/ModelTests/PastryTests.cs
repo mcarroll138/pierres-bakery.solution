@@ -20,6 +20,18 @@ namespace PierresBakery.Tests
       // Assert
       Assert.AreEqual(expectedCost, actualCost);
     }
-  }
+    [TestMethod]
+    public void CalculatePastryCpstWithDeal_ReturnsCorrectCostForDeal()
+    {
+      // Arrange
+      int numberOfPastries = 5;
+      int expectedCost = 8;
+      Pastry pastry = new Pastry();
 
+      // Act
+      int actualCost = pastry.CalculatePastryCost(numberOfPastries);
+      // Assert
+      Assert.AreEqual(expectedCost, actualCost);
+    }
+  }
 }
