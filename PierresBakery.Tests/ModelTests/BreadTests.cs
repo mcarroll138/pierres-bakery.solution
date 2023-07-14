@@ -20,5 +20,20 @@ namespace PierresBakery.Tests
       // Assert
       Assert.AreEqual(expectedCost, actualCost);
     }
+
+    [TestMethod]
+    public void CalculateBreadCostWithDeal_ReturnsCorrectCostForDeal()
+    {
+      // Arrange
+      int numberOfLoaves = 3;
+      int expectedCost = 10;
+      Bread bread = new Bread();
+
+      // Act
+      int actualCost = Bread.CalculatedBreadCostForDeal(numberOfLoaves);
+      // Assert
+      Assert.AreEqual(expectedCost, actualCost);
+    }
+
   }
 }
