@@ -2,7 +2,7 @@
 
 ### By Michael Carroll
 
-A C# application where a user can order bread and pastries from a bakery.
+A C# application where a user can order bread and pastries from a bakery and discounts are offered based on the quantities ordered.
 
 
 Link to GH Page:
