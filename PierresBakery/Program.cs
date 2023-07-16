@@ -6,6 +6,10 @@ namespace PierresBakery
 {
   class Program
   {
+    private static int numberOfLoaves;
+    private static int breadTotalCost;
+    private static int numberOfPastries;
+    private static int pastryTotalCost;
     static void Main()
     {
       Console.WriteLine("*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*");
@@ -40,8 +44,8 @@ namespace PierresBakery
     {
       Bread bread = new Bread();
       Console.WriteLine("How many loaves of bread would you like to order?");
-      int numberOfLoaves = int.Parse(Console.ReadLine());
-      int totalCost = bread.CalculateBreadCost(numberOfLoaves);
+      numberOfLoaves = int.Parse(Console.ReadLine());
+      breadTotalCost = bread.CalculateBreadCost(numberOfLoaves);
       if (numberOfLoaves == 0)
       {
         Console.WriteLine("Would you like to order pastries only?");
@@ -57,7 +61,7 @@ namespace PierresBakery
       }
       else
       {
-        Console.WriteLine($"Your total for {numberOfLoaves} loaves is ${totalCost}");
+        Console.WriteLine($"Your total for {numberOfLoaves} loaves is ${breadTotalCost}");
         Console.WriteLine("Would you like to order to start a pastry order?");
         string pastryResponseTwo = Console.ReadLine();
         if (pastryResponseTwo.ToLower() == "yes")
@@ -67,6 +71,7 @@ namespace PierresBakery
         else
         {
           Console.WriteLine("Thank you for your order, we will see you soon!");
+          GrandTotal();
         }
       }
 
@@ -76,11 +81,19 @@ namespace PierresBakery
     {
       Pastry pastry = new Pastry();
       Console.WriteLine("How many pastries would you like to order?");
-      int numberOfPastries = int.Parse(Console.ReadLine());
-      int totalCost = pastry.CalculatePastryCost(numberOfPastries);
-      Console.WriteLine($"Your total for {numberOfPastries} pastries is ${totalCost}");
+      numberOfPastries = int.Parse(Console.ReadLine());
+      pastryTotalCost = pastry.CalculatePastryCost(numberOfPastries);
+      Console.WriteLine($"Your total for {numberOfPastries} pastries is ${pastryTotalCost}");
+      GrandTotal();
     }
-
+    static void GrandTotal()
+    {
+      if (numberOfLoaves >= 1 && numberOfPastries >= 1)
+      {
+        int grandTotal = breadTotalCost + pastryTotalCost;
+        Console.WriteLine($"Your grand total for {numberOfLoaves} loaves and {numberOfPastries} pastries is ${grandTotal}");
+      }
+    }
   }
 }
 
