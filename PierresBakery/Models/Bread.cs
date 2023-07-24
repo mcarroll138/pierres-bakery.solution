@@ -5,6 +5,13 @@ namespace PierresBakery.Models
   public class Bread
   {
     private static int _fullLoafPrice = 5;
+    private int _numberOfLoaves;
+    public int NumberOfLoaves
+    {
+      get { return _numberOfLoaves; }
+      set { _numberOfLoaves = value; }
+    }
+    public int TotalCost { get; set; }
 
     public int CalculateBreadCost(int numberOfLoaves)
     {

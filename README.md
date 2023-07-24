@@ -22,8 +22,7 @@ https://github.com/mcarroll138
 - Run dotnet run to run the program.
 
 ## Known Bugs
-- No private classes
-- No get or set function
+
 ## License
 MIT
 

@@ -16,6 +16,7 @@ namespace PierresBakery.Tests
 
       // Act
       int actualCost = bread.CalculateBreadCost(numberOfLoaves);
+      bread.TotalCost = actualCost;
 
       // Assert
       Assert.AreEqual(expectedCost, actualCost);
@@ -31,10 +32,11 @@ namespace PierresBakery.Tests
 
       // Act
       int actualCost = bread.CalculateBreadCost(numberOfLoaves);
+      bread.TotalCost = actualCost;
+
       // Assert
       Assert.AreEqual(expectedCost, actualCost);
     }
   }
 }
-
 

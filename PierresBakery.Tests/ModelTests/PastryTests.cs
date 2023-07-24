@@ -16,12 +16,14 @@ namespace PierresBakery.Tests
 
       // Act
       int actualCost = pastry.CalculatePastryCost(numberOfPastries);
+      pastry.TotalCost = actualCost;
 
       // Assert
       Assert.AreEqual(expectedCost, actualCost);
     }
+
     [TestMethod]
-    public void CalculatePastryCpstWithDeal_ReturnsCorrectCostForDeal()
+    public void CalculatePastryCostWithDeal_ReturnsCorrectCostForDeal()
     {
       // Arrange
       int numberOfPastries = 5;
@@ -30,6 +32,8 @@ namespace PierresBakery.Tests
 
       // Act
       int actualCost = pastry.CalculatePastryCost(numberOfPastries);
+      pastry.TotalCost = actualCost;
+
       // Assert
       Assert.AreEqual(expectedCost, actualCost);
     }
